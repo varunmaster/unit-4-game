@@ -17,25 +17,33 @@ var gemArr = {
     "ruby": setGemValues()
 };
 var userNumTotal = 0;
-var gameComplete = isGameComplete();
+var gameComplete = isUserOver();
+var wins = 0;
+var loss  = 0;
+
 
 
 $(document).ready(function(){
 
     $(".gem").on("click", function() { //this refers to any of the "gem" class pressed in html
         userNumTotal += ($(this).val());
+        if(userNumTotal > targetNum) {
+            loss++;
+            newGame();
+        }else if (userNumTotal === targetNum) {
+            wins++;
+            newGame();
+        }else {
+            //continue; //error here in console
+        }
     }); 
 
-});
+}); //Document.ready ends here
 
 
 
 
-
-
-
-
-function isGameComplete(){
+function isUserOver(){
     if(parseInt(userNumTotal) > targetNum){
         return true;
     }
@@ -47,6 +55,17 @@ function getTargetNum() {
 
 function setGemValues() { 
     return gemValList[Math.floor(Math.random() * gemValList.length)];
+}
+
+function newGame() { 
+    targetNum = getTargetNum();
+    gemArr = {
+        "emerald": setGemValues(),
+        "diamond": setGemValues(),
+        "sapphire": setGemValues(),
+        "ruby": setGemValues()
+    };
+
 }
 
 console.log("targetNum: ", targetNum);
