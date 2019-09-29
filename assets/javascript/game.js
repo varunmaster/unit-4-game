@@ -25,11 +25,12 @@ assginValuesToGems();
 
 
 $(document).ready(function () {
-
+    $(".targetNum").text(targetNum);
     $(".gem").on("click", function () { //this refers to any of the "gem" class pressed in html
         console.log("adding value: ", parseInt($(this).val()));
         userNumTotal += (parseInt($(this).val()));
-        $(".targetNum").text(userNumTotal);
+        $(".targetNum").text(targetNum);
+        $(".userNumTotal").text(userNumTotal);
         if (userNumTotal > targetNum) {
             console.log("user went over...resetting");
             loss++;
@@ -77,7 +78,8 @@ function setGemValues() {
 function newGame() {
     targetNum = getTargetNum();
     userNumTotal = 0;
-    $(".targetNum").text(userNumTotal);
+    $(".targetNum").text(targetNum);
+    $(".userNumTotal").text(userNumTotal);
     gemObj = {
         "emerald": setGemValues(),
         "diamond": setGemValues(),

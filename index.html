@@ -22,34 +22,62 @@
 
     <div class="container">
         <div class="card">
-            <div class="card-body">
-                Target Number to reach: <br>
-                <div class="targetNum">0</div>
+            <div class="card-body directions">
+                <p>You will be give a random number at the start of the game.</p>
+
+                <p>There are four crystals below. By clicking on a crystal you will will add a specific amount of points
+                    to your score.</p>
+
+                <p>You win the game by matching your total score to random number, you lose the game if your total score
+                    goes above the random number.</p>
+
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+
+                <p>Each time the game starts, the game will change the value of each crystal.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container target">
+        <div class="target">
+            <div class="card">
+                <div class="card-body">
+                    Target Number to reach: <br>
+                    <div class="targetNum">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container score">
+        <div class="score">
+            <div class="card">
+                <div class="card-body">
+                    <p>Wins: <span class="wins">0</span></p>
+                    <p>Losses: <span class="loss">0</span></p>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="container">
+        <button type="button" alt="emerald" class="btn btn-primary gem emerald" src="" name="emerald"><img
+                src="assets/images/diamonds-clipart-emerald-5.png"></button>
+        <button type="button" alt="diamond" class="btn btn-primary gem diamond" name="diamond"><img
+                src="assets/images/diamond.png"></button>
+        <button type="button" alt="sapphire" class="btn btn-primary gem sapphire" name="sapphire"><img
+                src="assets/images/sapphire.png"></button>
+        <button type="button" alt="ruby" class="btn btn-primary gem ruby" name="ruby"><img
+                src="assets/images/ruby.png"></button>
+    </div>
+
+    <div class="container current">
         <div class="card">
-            <div class="card-body">
-                <p>Wins: <span class="wins">0</span></p>
+            <div class="card-body current">
+                Your current score: <br>
+                <div class="userNumTotal">0</div>
             </div>
         </div>
-    </div>
-
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <p>Losses: <span class="loss">0</span></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <button type="button" alt="emerald" class="btn btn-primary gem emerald" src="" name="emerald"><img src="assets/images/diamonds-clipart-emerald-5.png"></button>
-        <button type="button" alt="diamond" class="btn btn-primary gem diamond" name="diamond"><img src="assets/images/diamond.png"></button>
-        <button type="button" alt="sapphire" class="btn btn-primary gem sapphire" name="sapphire"><img src="assets/images/sapphire.png"></button>
-        <button type="button" alt="ruby" class="btn btn-primary gem ruby" name="ruby"><img src="assets/images/ruby.png"></button>
     </div>
 
     <script type="text/javascript" src="assets/javascript/game.js"></script>
