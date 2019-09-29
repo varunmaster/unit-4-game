@@ -33,14 +33,21 @@ $(document).ready(function () {
         if (userNumTotal > targetNum) {
             console.log("user went over...resetting");
             loss++;
+            $(".loss").text(loss);
             newGame();
             console.log("loss: ", loss);
         } else if (userNumTotal === targetNum) {
             console.log("user won...resetting");
             wins++;
+            $(".wins").text(wins);
             newGame();
             console.log("wins: ", wins);
         }
+        console.log("targetNum: ", targetNum);
+        console.log("emerald", gemObj.emerald);
+        console.log("diamond", gemObj.diamond);
+        console.log("sapphire", gemObj.sapphire);
+        console.log("ruby", gemObj.ruby);
     });
 
 }); //Document.ready ends here
@@ -79,9 +86,3 @@ function newGame() {
     };
     assginValuesToGems();
 }
-
-console.log("targetNum: ", targetNum);
-console.log("gem", gemObj.emerald);
-console.log("gem", gemObj.diamond);
-console.log("gem", gemObj.sapphire);
-console.log("gem", gemObj.ruby);
