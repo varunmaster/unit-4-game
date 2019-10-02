@@ -35,12 +35,14 @@ $(document).ready(function () {
             console.log("user went over...resetting");
             loss++;
             $(".loss").text(loss);
+            $(".score-body").text("You lost!!");
             newGame();
             console.log("loss: ", loss);
         } else if (userNumTotal === targetNum) {
             console.log("user won...resetting");
             wins++;
             $(".wins").text(wins);
+            $(".score-body").text("You Won!!");
             newGame();
             console.log("wins: ", wins);
         }
