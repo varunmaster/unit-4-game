@@ -90,3 +90,50 @@ function newGame() {
     };
     assginValuesToGems();
 }
+
+
+
+
+
+
+
+/*
+var userAnsArr = [];
+var AnsArr = ["test2","test6"];
+var numCorrect = 0;
+var numIncorrect = 0;
+var numUnanswered = 0;
+var radio = [];
+
+timeout = setTimeout(checkAnswers,120000); //if user doesn't submit in 120 seconds, do it automatically
+
+$(document).ready(function (){
+    $(".submit").on("click",function (){
+        clearTimeout(timeout); //if the submit button is clicked then stop the timer
+        // console.log(userAnsArr);
+        checkAnswers();
+        // console.log(numCorrect);
+    }); //click ends here
+});//doucment ends here
+
+function checkAnswers() {
+    radio = document.getElementsByClassName("question");
+    console.log(radio);
+    for(var i = 0; i < radio.length; i++){
+        if((radio[i].checked.val()) && (radio[i] === AnsArr[i])) {
+            return numCorrect += 1;
+        }
+        else if((radio[i].checked) && (radio[i] !== AnsArr[i])) {
+            return numIncorrect += 1;
+        }
+        else if(!(radio[i].checked)) {
+            return numUnanswered += 1;
+        }
+    }
+}
+
+
+// if(!$(".question").is(':checked')){
+//     alert("checked");
+// }
+*/
